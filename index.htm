@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Digital Watch</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="starfield"></canvas>
+
+  <div class="container">
+    <div class="clock" id="clockDisplay"></div>
+
+    <div class="circular-stopwatch">
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" class="track" />
+        <circle cx="50" cy="50" r="45" class="progress" id="progressCircle" />
+        <text x="50%" y="55%" text-anchor="middle" class="svg-time" id="svgTime">00:00</text>
+      </svg>
+    </div>
+
+    <div class="controls">
+      <button onclick="startStopwatch()">Start</button>
+      <button onclick="pauseStopwatch()">Pause</button>
+      <button onclick="resetStopwatch()">Reset</button>
+      <button onclick="recordLap()">Lap</button>
+      <button onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+
+    <ul id="lapList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
